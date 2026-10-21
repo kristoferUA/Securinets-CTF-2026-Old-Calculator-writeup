@@ -54,7 +54,14 @@ docker load -i release-assets/old-calculator-linux-amd64.tar.gz
 docker compose up -d --no-build --wait
 ```
 
-The GitHub source archive contains the repository files. For a source-only checkout, obtain the image from the published GitHub Release when available and place it under `release-assets/`. Publication instructions are in [publishing.md](publishing.md).
+The image is published in [GitHub Release v1.0.0](https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/tag/v1.0.0). For a source-only checkout, download the image and checksum into `release-assets/`:
+
+```bash
+curl -fL -o release-assets/old-calculator-linux-amd64.tar.gz https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/download/v1.0.0/old-calculator-linux-amd64.tar.gz
+curl -fL -o release-assets/old-calculator-linux-amd64.tar.gz.sha256 https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/download/v1.0.0/old-calculator-linux-amd64.tar.gz.sha256
+```
+
+Verify the checksum from that directory, then run the loading commands above. Publication instructions are in [publishing.md](publishing.md).
 
 Loading the image allows deployment without downloading the base image. On another CPU architecture, build from the Dockerfile.
 

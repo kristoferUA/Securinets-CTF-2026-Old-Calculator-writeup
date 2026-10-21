@@ -6,6 +6,10 @@ Securinets · crypto · автор: [kristoferUA](https://github.com/kristoferUA
 
 [Локальний інстанс](docs/instance.uk.md) · [Протокол](reference/PROTOCOL.md) · [Публікація на GitHub](docs/publishing.md)
 
+**Docker-сервіс:** [Compose](compose.yaml) · [Dockerfile](Dockerfile) · [TCP-сервер](server.py).
+
+**Готовий образ Linux amd64:** [Завантажити — 45 MB](https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/download/v1.0.0/old-calculator-linux-amd64.tar.gz) · [SHA256](https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/download/v1.0.0/old-calculator-linux-amd64.tar.gz.sha256) · [Реліз v1.0.0](https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/tag/v1.0.0).
+
 Old Calculator надає арифметичні операції над прихованими масивами входів і виходів та просить визначити функцію. Остаточний розв'язок пакує дві повні пари в один точний двійковий дріб, читає його через калькулятор і локально відновлює поточну функцію. На раунд потрібно **45 арифметичних операцій**. Цим способом пройдено всі **16 раундів**.
 
 Флаг:

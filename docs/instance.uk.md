@@ -54,7 +54,14 @@ docker load -i release-assets/old-calculator-linux-amd64.tar.gz
 docker compose up -d --no-build --wait
 ```
 
-Архів для GitHub містить файли репозиторію. Для окремо клонованого коду образ можна отримати з опублікованого GitHub Release, коли він буде доступний, і покласти в `release-assets/`. Порядок публікації описано в [publishing.md](publishing.md).
+Образ опубліковано в [GitHub Release v1.0.0](https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/tag/v1.0.0). Для окремо клонованого коду завантаж образ і контрольну суму в `release-assets/`:
+
+```bash
+curl -fL -o release-assets/old-calculator-linux-amd64.tar.gz https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/download/v1.0.0/old-calculator-linux-amd64.tar.gz
+curl -fL -o release-assets/old-calculator-linux-amd64.tar.gz.sha256 https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/download/v1.0.0/old-calculator-linux-amd64.tar.gz.sha256
+```
+
+Перевір контрольну суму з цієї папки та виконай наведені вище команди імпорту. Порядок публікації описано в [publishing.md](publishing.md).
 
 Імпорт образу дозволяє запустити сервіс без завантаження базового образу. Для іншої архітектури процесора збирай із Dockerfile.
 

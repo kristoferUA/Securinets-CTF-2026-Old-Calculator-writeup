@@ -24,7 +24,7 @@ If using another repository name or an existing writeups repository, use that re
 
 ## Publish the Linux image
 
-Create a GitHub Release, for example `v1.0.0`, and attach these files from `release-assets/` in the complete bundle:
+The initial image is published in [Release v1.0.0](https://github.com/kristoferUA/Securinets-CTF-2026-Old-Calculator-writeup/releases/tag/v1.0.0). For a subsequent version, create a new GitHub Release and attach these files from `release-assets/` in the complete bundle:
 
 ```text
 old-calculator-linux-amd64.tar.gz
