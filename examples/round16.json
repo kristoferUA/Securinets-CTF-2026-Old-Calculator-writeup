@@ -1,0 +1,15 @@
+{
+  "challenge": "Old Calculator",
+  "competition": "Securinets",
+  "author": "kristoferUA",
+  "evidence": "Numerical fields transcribed from the successful final-round screenshot; not a raw packet capture.",
+  "round": 16,
+  "a": 15,
+  "b": 2,
+  "samples": [[60, 902], [225, 3377]],
+  "packed_word": 1032685628721,
+  "selected_value_text": "30.055107453401433",
+  "test_input": 228,
+  "client_answer": {"y": 3422},
+  "flag": "Securinets{ed9a482110a5a6936482e700155f811742f97a04decfa75d3cee28bca77239c1}"
+}

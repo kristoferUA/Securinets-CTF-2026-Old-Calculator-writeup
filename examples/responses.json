@@ -1,0 +1,58 @@
+{
+  "challenge": "Old Calculator",
+  "version": "updated prompt used by the successful solver",
+  "author": "kristoferUA",
+  "packet_capture": false,
+  "notes": [
+    "Visible text and response object shapes transcribed from supplied evidence.",
+    "JSON spacing and trailing whitespace are not asserted to be exact for every case.",
+    "See reference/PROTOCOL.md and docs/protocol-history.md for unresolved compatibility details."
+  ],
+  "initial_visible_lines": [
+    "Round 1:",
+    "Enter JSON:"
+  ],
+  "arithmetic_success": {
+    "object": {
+      "result": "Operation successful"
+    },
+    "next_prompt": "Enter JSON:"
+  },
+  "final_question_visible_lines": [
+    "the value of x[98] you submitted is: <selected_value>",
+    "As a final Test please give the value after applying the secret operation of the random number <t>:",
+    "{\"y\" : number }"
+  ],
+  "direct_error_examples": [
+    {
+      "error": "Invalid index"
+    },
+    {
+      "error": "Array must be x or y"
+    },
+    {
+      "error": "Constant must be 8-bit"
+    },
+    {
+      "error": "Unsupported operation"
+    },
+    {
+      "error": "'source'"
+    }
+  ],
+  "nested_error_examples": [
+    {
+      "error": "{\"error\": \"Value at y[99] is 11 bits, which cannot be represented as 8-bit:\"}"
+    },
+    {
+      "error": "{\"error\": \"Value at x[98] is negative, which cannot shown for performance reasons:\"}"
+    },
+    {
+      "error": "{\"error\": \"Incorrect value submitted. Expected 57, but got 3048\"}"
+    }
+  ],
+  "wrong_final_answer_closes_connection": true,
+  "flag_object": {
+    "flag": "Securinets{ed9a482110a5a6936482e700155f811742f97a04decfa75d3cee28bca77239c1}"
+  }
+}

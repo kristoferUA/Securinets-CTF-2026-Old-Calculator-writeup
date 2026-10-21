@@ -1,0 +1,216 @@
+OLD CALCULATOR local fractional sample solver v1.0
+LOCAL CHECK: 2048 arithmetic cases, 42-bit precision, and observed prompt passed.
+Endpoint: 127.0.0.1:4873
+Trace: /tmp/local_random_trace.jsonl
+Model: y=a*x+b; a,b in 1..16; x in 0..255; y below 8192.
+One fractional-reading check, then at most 3 solving connection(s).
+Resolving IPv4 address...
+IPv4: 127.0.0.1
+
+SERVER CHECK: exact fractional reading of all 42 packed bits.
+SERVER: Round 1:
+Enter JSON:
+  fraction-check: operations 16/51
+  fraction-check: operations 32/51
+  fraction-check: operations 48/51
+  fraction-check: operations 51/51
+SERVER:  the value of x[98] you submitted is: 127.9999999999709
+As a final Test please give the value after applying the secret operation of the random number 134: 
+{"y" : number }
+SERVER CHECK PASSED: 127.9999999999709 preserves all 42 bits.
+Closing the checking connection without a final-test answer.
+
+SOLVING CONNECTION 1
+SERVER: Round 1:
+Enter JSON:
+Round 1/16: packing two samples (45 operations).
+  round-1: operations 16/45
+  round-1: operations 32/45
+  round-1: operations 45/45
+SERVER:  the value of x[98] you submitted is: 16.528528256021673
+As a final Test please give the value after applying the secret operation of the random number 4: 
+{"y" : number }
+  decoded samples=[(33, 467), (104, 1461)]; coefficient pairs=[(14, 5)]
+  a=14, b=5, random input=4; sending y=61
+SERVER: Round 2:
+Enter JSON:
+ACCEPTED: round 1/16
+Round 2/16: packing two samples (45 operations).
+  round-2: operations 16/45
+  round-2: operations 32/45
+  round-2: operations 45/45
+SERVER:  the value of x[98] you submitted is: 81.07020999718225
+As a final Test please give the value after applying the secret operation of the random number 218: 
+{"y" : number }
+  decoded samples=[(162, 1150), (82, 590)]; coefficient pairs=[(7, 16)]
+  a=7, b=16, random input=218; sending y=1542
+SERVER: Round 3:
+Enter JSON:
+ACCEPTED: round 2/16
+Round 3/16: packing two samples (45 operations).
+  round-3: operations 16/45
+  round-3: operations 32/45
+  round-3: operations 45/45
+SERVER:  the value of x[98] you submitted is: 45.04417710294365
+As a final Test please give the value after applying the secret operation of the random number 191: 
+{"y" : number }
+  decoded samples=[(90, 723), (204, 1635)]; coefficient pairs=[(8, 3)]
+  a=8, b=3, random input=191; sending y=1531
+SERVER: Round 4:
+Enter JSON:
+ACCEPTED: round 3/16
+Round 4/16: packing two samples (45 operations).
+  round-4: operations 16/45
+  round-4: operations 32/45
+  round-4: operations 45/45
+SERVER:  the value of x[98] you submitted is: 121.52984143682988
+As a final Test please give the value after applying the secret operation of the random number 104: 
+{"y" : number }
+  decoded samples=[(243, 488), (236, 474)]; coefficient pairs=[(2, 2)]
+  a=2, b=2, random input=104; sending y=210
+SERVER: Round 5:
+Enter JSON:
+ACCEPTED: round 4/16
+Round 5/16: packing two samples (45 operations).
+  round-5: operations 16/45
+  round-5: operations 32/45
+  round-5: operations 45/45
+SERVER:  the value of x[98] you submitted is: 116.14210392785026
+As a final Test please give the value after applying the secret operation of the random number 48: 
+{"y" : number }
+  decoded samples=[(232, 2328), (59, 598)]; coefficient pairs=[(10, 8)]
+  a=10, b=8, random input=48; sending y=488
+SERVER: Round 6:
+Enter JSON:
+ACCEPTED: round 5/16
+Round 6/16: packing two samples (45 operations).
+  round-6: operations 16/45
+  round-6: operations 32/45
+  round-6: operations 45/45
+SERVER:  the value of x[98] you submitted is: 23.509094715525862
+As a final Test please give the value after applying the secret operation of the random number 36: 
+{"y" : number }
+  decoded samples=[(47, 149), (2, 14)]; coefficient pairs=[(3, 8)]
+  a=3, b=8, random input=36; sending y=116
+SERVER: Round 7:
+Enter JSON:
+ACCEPTED: round 6/16
+Round 7/16: packing two samples (45 operations).
+  round-7: operations 16/45
+  round-7: operations 32/45
+  round-7: operations 45/45
+SERVER:  the value of x[98] you submitted is: 68.54278544365661
+As a final Test please give the value after applying the secret operation of the random number 97: 
+{"y" : number }
+  decoded samples=[(137, 700), (255, 1290)]; coefficient pairs=[(5, 15)]
+  a=5, b=15, random input=97; sending y=500
+SERVER: Round 8:
+Enter JSON:
+ACCEPTED: round 7/16
+Round 8/16: packing two samples (45 operations).
+  round-8: operations 16/45
+  round-8: operations 32/45
+  round-8: operations 45/45
+SERVER:  the value of x[98] you submitted is: 55.534016144345514
+As a final Test please give the value after applying the secret operation of the random number 224: 
+{"y" : number }
+  decoded samples=[(111, 557), (82, 412)]; coefficient pairs=[(5, 2)]
+  a=5, b=2, random input=224; sending y=1122
+SERVER: Round 9:
+Enter JSON:
+ACCEPTED: round 8/16
+Round 9/16: packing two samples (45 operations).
+  round-9: operations 16/45
+  round-9: operations 32/45
+  round-9: operations 45/45
+SERVER:  the value of x[98] you submitted is: 101.5993843266042
+As a final Test please give the value after applying the secret operation of the random number 158: 
+{"y" : number }
+  decoded samples=[(203, 1628), (80, 644)]; coefficient pairs=[(8, 4)]
+  a=8, b=4, random input=158; sending y=1268
+SERVER: Round 10:
+Enter JSON:
+ACCEPTED: round 9/16
+Round 10/16: packing two samples (45 operations).
+  round-10: operations 16/45
+  round-10: operations 32/45
+  round-10: operations 45/45
+SERVER:  the value of x[98] you submitted is: 4.003363137220731
+As a final Test please give the value after applying the secret operation of the random number 141: 
+{"y" : number }
+  decoded samples=[(8, 55), (26, 163)]; coefficient pairs=[(6, 7)]
+  a=6, b=7, random input=141; sending y=853
+SERVER: Round 11:
+Enter JSON:
+ACCEPTED: round 10/16
+Round 11/16: packing two samples (45 operations).
+  round-11: operations 16/45
+  round-11: operations 32/45
+  round-11: operations 45/45
+SERVER:  the value of x[98] you submitted is: 59.07289626728743
+As a final Test please give the value after applying the secret operation of the random number 88: 
+{"y" : number }
+  decoded samples=[(118, 1194), (85, 864)]; coefficient pairs=[(10, 14)]
+  a=10, b=14, random input=88; sending y=894
+SERVER: Round 12:
+Enter JSON:
+ACCEPTED: round 11/16
+Round 12/16: packing two samples (45 operations).
+  round-12: operations 16/45
+  round-12: operations 32/45
+  round-12: operations 45/45
+SERVER:  the value of x[98] you submitted is: 90.07733488388476
+As a final Test please give the value after applying the secret operation of the random number 102: 
+{"y" : number }
+  decoded samples=[(180, 1267), (14, 105)]; coefficient pairs=[(7, 7)]
+  a=7, b=7, random input=102; sending y=721
+SERVER: Round 13:
+Enter JSON:
+ACCEPTED: round 12/16
+Round 13/16: packing two samples (45 operations).
+  round-13: operations 16/45
+  round-13: operations 32/45
+  round-13: operations 45/45
+SERVER:  the value of x[98] you submitted is: 35.04731418317533
+As a final Test please give the value after applying the secret operation of the random number 194: 
+{"y" : number }
+  decoded samples=[(70, 775), (50, 555)]; coefficient pairs=[(11, 5)]
+  a=11, b=5, random input=194; sending y=2139
+SERVER: Round 14:
+Enter JSON:
+ACCEPTED: round 13/16
+Round 14/16: packing two samples (45 operations).
+  round-14: operations 16/45
+  round-14: operations 32/45
+  round-14: operations 45/45
+SERVER:  the value of x[98] you submitted is: 93.64914255743497
+As a final Test please give the value after applying the secret operation of the random number 226: 
+{"y" : number }
+  decoded samples=[(187, 2443), (141, 1845)]; coefficient pairs=[(13, 12)]
+  a=13, b=12, random input=226; sending y=2950
+SERVER: Round 15:
+Enter JSON:
+ACCEPTED: round 14/16
+Round 15/16: packing two samples (45 operations).
+  round-15: operations 16/45
+  round-15: operations 32/45
+  round-15: operations 45/45
+SERVER:  the value of x[98] you submitted is: 81.09959011434694
+As a final Test please give the value after applying the secret operation of the random number 93: 
+{"y" : number }
+  decoded samples=[(162, 1631), (175, 1761)]; coefficient pairs=[(10, 11)]
+  a=10, b=11, random input=93; sending y=941
+SERVER: Round 16:
+Enter JSON:
+ACCEPTED: round 15/16
+Round 16/16: packing two samples (45 operations).
+  round-16: operations 16/45
+  round-16: operations 32/45
+  round-16: operations 45/45
+SERVER:  the value of x[98] you submitted is: 75.63000703271246
+As a final Test please give the value after applying the secret operation of the random number 119: 
+{"y" : number }
+  decoded samples=[(151, 2130), (9, 142)]; coefficient pairs=[(14, 16)]
+  a=14, b=16, random input=119; sending y=1682
+SERVER: {"flag": "Securinets{ed9a482110a5a6936482e700155f811742f97a04decfa75d3cee28bca77239c1}
+FLAG: Securinets{ed9a482110a5a6936482e700155f811742f97a04decfa75d3cee28bca77239c1}

@@ -1,0 +1,329 @@
+{
+  "date": "2026-10-21",
+  "host": "calculator-crypto.securinets.tn",
+  "port": 4873,
+  "ipv4": "158.158.74.206",
+  "observation_connections": 47,
+  "greeting_only_connections": 1,
+  "total_successful_tcp_connections": 48,
+  "recorded_client_writes": 957,
+  "recorded_server_bytes": 49166,
+  "error_cases_with_confirmed_eof": 31,
+  "solved_rounds": 16,
+  "marker_replaced_transitions": 15,
+  "flag_eof_confirmed": true,
+  "first_recorded_utc": "2026-10-21T13:21:07.343698+00:00",
+  "last_recorded_utc": "2026-10-21T13:26:00.994349+00:00",
+  "successful_rounds": [
+    {
+      "round": 1,
+      "a": 1,
+      "b": 12,
+      "samples": [
+        [
+          148,
+          160
+        ],
+        [
+          117,
+          129
+        ]
+      ],
+      "test_input": 156,
+      "answer": {
+        "y": 168.0
+      }
+    },
+    {
+      "round": 2,
+      "a": 8,
+      "b": 6,
+      "samples": [
+        [
+          154,
+          1238
+        ],
+        [
+          199,
+          1598
+        ]
+      ],
+      "test_input": 59,
+      "answer": {
+        "y": 478
+      }
+    },
+    {
+      "round": 3,
+      "a": 13,
+      "b": 15,
+      "samples": [
+        [
+          194,
+          2537
+        ],
+        [
+          114,
+          1497
+        ]
+      ],
+      "test_input": 90,
+      "answer": {
+        "y": 1185
+      }
+    },
+    {
+      "round": 4,
+      "a": 4,
+      "b": 16,
+      "samples": [
+        [
+          254,
+          1032
+        ],
+        [
+          107,
+          444
+        ]
+      ],
+      "test_input": 19,
+      "answer": {
+        "y": 92
+      }
+    },
+    {
+      "round": 5,
+      "a": 11,
+      "b": 9,
+      "samples": [
+        [
+          215,
+          2374
+        ],
+        [
+          238,
+          2627
+        ]
+      ],
+      "test_input": 134,
+      "answer": {
+        "y": 1483
+      }
+    },
+    {
+      "round": 6,
+      "a": 5,
+      "b": 6,
+      "samples": [
+        [
+          225,
+          1131
+        ],
+        [
+          148,
+          746
+        ]
+      ],
+      "test_input": 176,
+      "answer": {
+        "y": 886
+      }
+    },
+    {
+      "round": 7,
+      "a": 11,
+      "b": 16,
+      "samples": [
+        [
+          144,
+          1600
+        ],
+        [
+          123,
+          1369
+        ]
+      ],
+      "test_input": 16,
+      "answer": {
+        "y": 192
+      }
+    },
+    {
+      "round": 8,
+      "a": 11,
+      "b": 1,
+      "samples": [
+        [
+          212,
+          2333
+        ],
+        [
+          111,
+          1222
+        ]
+      ],
+      "test_input": 144,
+      "answer": {
+        "y": 1585
+      }
+    },
+    {
+      "round": 9,
+      "a": 1,
+      "b": 13,
+      "samples": [
+        [
+          110,
+          123
+        ],
+        [
+          218,
+          231
+        ]
+      ],
+      "test_input": 19,
+      "answer": {
+        "y": 32
+      }
+    },
+    {
+      "round": 10,
+      "a": 10,
+      "b": 6,
+      "samples": [
+        [
+          143,
+          1436
+        ],
+        [
+          179,
+          1796
+        ]
+      ],
+      "test_input": 33,
+      "answer": {
+        "y": 336
+      }
+    },
+    {
+      "round": 11,
+      "a": 3,
+      "b": 13,
+      "samples": [
+        [
+          82,
+          259
+        ],
+        [
+          13,
+          52
+        ]
+      ],
+      "test_input": 107,
+      "answer": {
+        "y": 334
+      }
+    },
+    {
+      "round": 12,
+      "a": 5,
+      "b": 2,
+      "samples": [
+        [
+          181,
+          907
+        ],
+        [
+          170,
+          852
+        ]
+      ],
+      "test_input": 149,
+      "answer": {
+        "y": 747
+      }
+    },
+    {
+      "round": 13,
+      "a": 8,
+      "b": 1,
+      "samples": [
+        [
+          35,
+          281
+        ],
+        [
+          9,
+          73
+        ]
+      ],
+      "test_input": 17,
+      "answer": {
+        "y": 137
+      }
+    },
+    {
+      "round": 14,
+      "a": 2,
+      "b": 8,
+      "samples": [
+        [
+          7,
+          22
+        ],
+        [
+          194,
+          396
+        ]
+      ],
+      "test_input": 5,
+      "answer": {
+        "y": 18
+      }
+    },
+    {
+      "round": 15,
+      "a": 11,
+      "b": 16,
+      "samples": [
+        [
+          157,
+          1743
+        ],
+        [
+          136,
+          1512
+        ]
+      ],
+      "test_input": 192,
+      "answer": {
+        "y": 2128
+      }
+    },
+    {
+      "round": 16,
+      "a": 14,
+      "b": 4,
+      "samples": [
+        [
+          74,
+          1040
+        ],
+        [
+          227,
+          3182
+        ]
+      ],
+      "test_input": 239,
+      "answer": {
+        "y": 3350
+      }
+    }
+  ],
+  "remaining_unknowns": [
+    "original random generator and seeding",
+    "exact random distributions",
+    "resource/session limits",
+    "untested JSON shapes and combined-error validation order"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "source": "Authorized observation of Old Calculator, 2026-10-21",
+  "notes": [
+    "Coefficients, test inputs, and x entries 0 and 99 were recorded from the live session.",
+    "Other array entries are generated locally; a complete live array snapshot was unavailable."
+  ],
+  "rounds": [
+    {
+      "a": 1,
+      "b": 12,
+      "x_overrides": {
+        "0": 148,
+        "99": 117
+      },
+      "test_input": 156
+    },
+    {
+      "a": 8,
+      "b": 6,
+      "x_overrides": {
+        "0": 154,
+        "99": 199
+      },
+      "test_input": 59
+    },
+    {
+      "a": 13,
+      "b": 15,
+      "x_overrides": {
+        "0": 194,
+        "99": 114
+      },
+      "test_input": 90
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "x_overrides": {
+        "0": 254,
+        "99": 107
+      },
+      "test_input": 19
+    },
+    {
+      "a": 11,
+      "b": 9,
+      "x_overrides": {
+        "0": 215,
+        "99": 238
+      },
+      "test_input": 134
+    },
+    {
+      "a": 5,
+      "b": 6,
+      "x_overrides": {
+        "0": 225,
+        "99": 148
+      },
+      "test_input": 176
+    },
+    {
+      "a": 11,
+      "b": 16,
+      "x_overrides": {
+        "0": 144,
+        "99": 123
+      },
+      "test_input": 16
+    },
+    {
+      "a": 11,
+      "b": 1,
+      "x_overrides": {
+        "0": 212,
+        "99": 111
+      },
+      "test_input": 144
+    },
+    {
+      "a": 1,
+      "b": 13,
+      "x_overrides": {
+        "0": 110,
+        "99": 218
+      },
+      "test_input": 19
+    },
+    {
+      "a": 10,
+      "b": 6,
+      "x_overrides": {
+        "0": 143,
+        "99": 179
+      },
+      "test_input": 33
+    },
+    {
+      "a": 3,
+      "b": 13,
+      "x_overrides": {
+        "0": 82,
+        "99": 13
+      },
+      "test_input": 107
+    },
+    {
+      "a": 5,
+      "b": 2,
+      "x_overrides": {
+        "0": 181,
+        "99": 170
+      },
+      "test_input": 149
+    },
+    {
+      "a": 8,
+      "b": 1,
+      "x_overrides": {
+        "0": 35,
+        "99": 9
+      },
+      "test_input": 17
+    },
+    {
+      "a": 2,
+      "b": 8,
+      "x_overrides": {
+        "0": 7,
+        "99": 194
+      },
+      "test_input": 5
+    },
+    {
+      "a": 11,
+      "b": 16,
+      "x_overrides": {
+        "0": 157,
+        "99": 136
+      },
+      "test_input": 192
+    },
+    {
+      "a": 14,
+      "b": 4,
+      "x_overrides": {
+        "0": 74,
+        "99": 227
+      },
+      "test_input": 239
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.env
+**/.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+artifacts/
+*.jsonl
+!reference/*.jsonl
+*.zip
+*.tar
+*.tar.gz
+/release-assets/*
+!/release-assets/README.md
+.DS_Store
+Thumbs.db

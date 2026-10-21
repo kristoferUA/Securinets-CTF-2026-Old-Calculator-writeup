@@ -1,0 +1,17 @@
+Old Calculator / Securinets
+Writeup author: kristoferUA
+
+Annotated transcription of the relevant final-round fields.
+SERVER/CLIENT prefixes and JSON whitespace are for presentation.
+This file is not an unmodified wire capture.
+
+ROUND: 16
+ARITHMETIC OPERATIONS: 45
+SERVER: the value of x[98] you submitted is: 30.055107453401433
+SERVER: As a final Test please give the value after applying the secret operation of the random number 228:
+SERVER: {"y" : number }
+LOCAL: decoded samples = [(60, 902), (225, 3377)]
+LOCAL: coefficients = (15, 2)
+LOCAL: f(228) = 3422
+CLIENT: {"y":3422}
+SERVER: {"flag":"Securinets{ed9a482110a5a6936482e700155f811742f97a04decfa75d3cee28bca77239c1}"}

@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.json -text
+*.jsonl -text
+solvers/solve_remote_original.py -text
+*.tar.gz binary
+*.zip binary

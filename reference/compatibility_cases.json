@@ -1,0 +1,2354 @@
+{
+  "scope": "Observed behavior only; not server source or a claim about unmeasured inputs.",
+  "date": "2026-10-21",
+  "host": "calculator-crypto.securinets.tn",
+  "port": 4873,
+  "cases": [
+    {
+      "name": "zero-reading",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 0\nAs a final Test please give the value after applying the secret operation of the random number 150: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    },
+    {
+      "name": "maximum-byte-reading",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 255,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 255\nAs a final Test please give the value after applying the secret operation of the random number 69: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    },
+    {
+      "name": "nine-bit-reading",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 128,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 2,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "error",
+          "text": "{\"error\": \"{\\\"error\\\": \\\"Value at x[98] is 9 bits, which cannot be represented as 8-bit:\\\"}\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "fraction-half",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 0.5\nAs a final Test please give the value after applying the secret operation of the random number 129: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    },
+    {
+      "name": "fraction-255-point-5",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 255,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "error",
+          "text": "{\"error\": \"'float' object cannot be interpreted as an integer\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "negative-fraction",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": -0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "error",
+          "text": "{\"error\": \"{\\\"error\\\": \\\"Value at x[98] is negative, which cannot shown for performance reasons:\\\"}\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "destination-y-reading",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "y",
+          "dest_index": 97
+        },
+        {
+          "operation": "add_const",
+          "source": "y",
+          "index": 97,
+          "const": 7,
+          "destination": "y",
+          "dest_index": 97
+        },
+        {
+          "operation": "submit",
+          "source": "y",
+          "index": 97
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of y[97] you submitted is: 7\nAs a final Test please give the value after applying the secret operation of the random number 224: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    },
+    {
+      "name": "negative-source-index",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": -1,
+          "const": 1,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Invalid index\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "negative-destination-index",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 1,
+          "destination": "x",
+          "dest_index": -1
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Invalid index\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "source-index-100",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 100,
+          "const": 1,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Invalid index\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "destination-index-100",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 1,
+          "destination": "x",
+          "dest_index": 100
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Invalid index\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "string-index",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": "0",
+          "const": 1,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"'<=' not supported between instances of 'int' and 'str'\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "fraction-index",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0.5,
+          "const": 1,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"list indices must be integers or slices, not float\"}"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": "0a"
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "constant-256",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 256,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Constant must be 8-bit\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "constant-minus-256",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": -256,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Constant must be 8-bit\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "constant-255-point-5",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 255.5,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Constant must be 8-bit\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "string-constant",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": "2",
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"'<=' not supported between instances of 'int' and 'str'\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "invalid-source-array",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "z",
+          "index": 0,
+          "const": 1,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Array must be x or y\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "invalid-destination-array",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 1,
+          "destination": "z",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Array must be x or y\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "unsupported-operation",
+      "requests": [
+        {
+          "operation": "divide"
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Unsupported operation\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "missing-operation",
+      "requests": [
+        {}
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"'operation'\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "missing-source",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "index": 0,
+          "const": 1,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"'source'\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "missing-index",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "const": 1,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"'index'\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "missing-const",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"'const'\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "missing-destination",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 1,
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"'destination'\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "missing-dest_index",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 1,
+          "destination": "x"
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"'dest_index'\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "request-without-newline",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "transport_error": "TimeoutError: timed out"
+    },
+    {
+      "name": "two-requests-one-write",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "ready"
+    },
+    {
+      "name": "partial-json-request",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "transport_error": "TimeoutError: timed out"
+    },
+    {
+      "name": "blank-request",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Expecting value: line 1 column 1 (char 0)\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "incorrect-final-answer",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 0\nAs a final Test please give the value after applying the secret operation of the random number 58: \n{\"y\" : number }"
+        },
+        {
+          "state": "error",
+          "text": "{\"error\": \"{\\\"error\\\": \\\"Incorrect value submitted. Expected 582, but got 0\\\"}\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "answer": {
+        "y": 0
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "missing-final-answer-key",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 0\nAs a final Test please give the value after applying the secret operation of the random number 29: \n{\"y\" : number }"
+        },
+        {
+          "state": "error",
+          "text": "{\"error\": \"{\\\"error\\\": \\\"Missing 'y' in input\\\"}\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "answer": {
+        "a": 0
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "round-lifecycle-1",
+      "rounds": [
+        {
+          "round": 1,
+          "question": "the value of x[98] you submitted is: 74.00979352372815\nAs a final Test please give the value after applying the secret operation of the random number 156: \n{\"y\" : number }",
+          "selected_text": "74.00979352372815",
+          "samples": [
+            [
+              148,
+              160
+            ],
+            [
+              117,
+              129
+            ]
+          ],
+          "packed_word": 2542957142145,
+          "coefficient_choices": [
+            [
+              1,
+              12
+            ]
+          ],
+          "a": 1,
+          "b": 12,
+          "test_input": 156,
+          "answer": {
+            "y": 168.0
+          },
+          "verdict_state": "ready",
+          "verdict": "Round 2:\nEnter JSON: "
+        },
+        {
+          "round": 2,
+          "question": "the value of x[98] you submitted is: 77.07560901524266\nAs a final Test please give the value after applying the secret operation of the random number 59: \n{\"y\" : number }",
+          "selected_text": "77.07560901524266",
+          "samples": [
+            [
+              154,
+              1238
+            ],
+            [
+              199,
+              1598
+            ]
+          ],
+          "packed_word": 2648297760318,
+          "coefficient_choices": [
+            [
+              8,
+              6
+            ]
+          ],
+          "a": 8,
+          "b": 6,
+          "test_input": 59,
+          "answer": {
+            "y": 478
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 3:\nEnter JSON: "
+        },
+        {
+          "round": 3,
+          "question": "the value of x[98] you submitted is: 97.1548734146927\nAs a final Test please give the value after applying the secret operation of the random number 90: \n{\"y\" : number }",
+          "selected_text": "97.1548734146927",
+          "samples": [
+            [
+              194,
+              2537
+            ],
+            [
+              114,
+              1497
+            ]
+          ],
+          "packed_word": 3338216031705,
+          "coefficient_choices": [
+            [
+              13,
+              15
+            ]
+          ],
+          "a": 13,
+          "b": 15,
+          "test_input": 90,
+          "answer": {
+            "y": 1185
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 4:\nEnter JSON: "
+        },
+        {
+          "round": 4,
+          "question": "the value of x[98] you submitted is: 127.06301380496006\nAs a final Test please give the value after applying the secret operation of the random number 19: \n{\"y\" : number }",
+          "selected_text": "127.06301380496006",
+          "samples": [
+            [
+              254,
+              1032
+            ],
+            [
+              107,
+              444
+            ]
+          ],
+          "packed_word": 4365851910588,
+          "coefficient_choices": [
+            [
+              4,
+              16
+            ]
+          ],
+          "a": 4,
+          "b": 16,
+          "test_input": 19,
+          "answer": {
+            "y": 92
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 5:\nEnter JSON: "
+        },
+        {
+          "round": 5,
+          "question": "the value of x[98] you submitted is: 107.64495428101509\nAs a final Test please give the value after applying the secret operation of the random number 134: \n{\"y\" : number }",
+          "selected_text": "107.64495428101509",
+          "samples": [
+            [
+              215,
+              2374
+            ],
+            [
+              238,
+              2627
+            ]
+          ],
+          "packed_word": 3698652465731,
+          "coefficient_choices": [
+            [
+              11,
+              9
+            ]
+          ],
+          "a": 11,
+          "b": 9,
+          "test_input": 134,
+          "answer": {
+            "y": 1483
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 6:\nEnter JSON: "
+        },
+        {
+          "round": 6,
+          "question": "the value of x[98] you submitted is: 112.56906606937991\nAs a final Test please give the value after applying the secret operation of the random number 176: \n{\"y\" : number }",
+          "selected_text": "112.56906606937991",
+          "samples": [
+            [
+              225,
+              1131
+            ],
+            [
+              148,
+              746
+            ]
+          ],
+          "packed_word": 3867843658474,
+          "coefficient_choices": [
+            [
+              5,
+              6
+            ]
+          ],
+          "a": 5,
+          "b": 6,
+          "test_input": 176,
+          "answer": {
+            "y": 886
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 7:\nEnter JSON: "
+        },
+        {
+          "round": 7,
+          "question": "the value of x[98] you submitted is: 72.09768561532837\nAs a final Test please give the value after applying the secret operation of the random number 16: \n{\"y\" : number }",
+          "selected_text": "72.09768561532837",
+          "samples": [
+            [
+              144,
+              1600
+            ],
+            [
+              123,
+              1369
+            ]
+          ],
+          "packed_word": 2477257614681,
+          "coefficient_choices": [
+            [
+              11,
+              16
+            ]
+          ],
+          "a": 11,
+          "b": 16,
+          "test_input": 16,
+          "answer": {
+            "y": 192
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 8:\nEnter JSON: "
+        },
+        {
+          "round": 8,
+          "question": "the value of x[98] you submitted is: 106.14242151955841\nAs a final Test please give the value after applying the secret operation of the random number 144: \n{\"y\" : number }",
+          "selected_text": "106.14242151955841",
+          "samples": [
+            [
+              212,
+              2333
+            ],
+            [
+              111,
+              1222
+            ]
+          ],
+          "packed_word": 3647025833158,
+          "coefficient_choices": [
+            [
+              11,
+              1
+            ]
+          ],
+          "a": 11,
+          "b": 1,
+          "test_input": 144,
+          "answer": {
+            "y": 1585
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 9:\nEnter JSON: "
+        },
+        {
+          "round": 9,
+          "question": "the value of x[98] you submitted is: 55.00755930619198\nAs a final Test please give the value after applying the secret operation of the random number 19: \n{\"y\" : number }",
+          "selected_text": "55.00755930619198",
+          "samples": [
+            [
+              110,
+              123
+            ],
+            [
+              218,
+              231
+            ]
+          ],
+          "packed_word": 1890045346023,
+          "coefficient_choices": [
+            [
+              1,
+              13
+            ]
+          ],
+          "a": 1,
+          "b": 13,
+          "test_input": 19,
+          "answer": {
+            "y": 32
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 10:\nEnter JSON: "
+        },
+        {
+          "round": 10,
+          "question": "the value of x[98] you submitted is: 71.58768921357114\nAs a final Test please give the value after applying the secret operation of the random number 33: \n{\"y\" : number }",
+          "selected_text": "71.58768921357114",
+          "samples": [
+            [
+              143,
+              1436
+            ],
+            [
+              179,
+              1796
+            ]
+          ],
+          "packed_word": 2459734271748,
+          "coefficient_choices": [
+            [
+              10,
+              6
+            ]
+          ],
+          "a": 10,
+          "b": 6,
+          "test_input": 33,
+          "answer": {
+            "y": 336
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 11:\nEnter JSON: "
+        },
+        {
+          "round": 11,
+          "question": "the value of x[98] you submitted is: 41.01581120642368\nAs a final Test please give the value after applying the secret operation of the random number 107: \n{\"y\" : number }",
+          "selected_text": "41.01581120642368",
+          "samples": [
+            [
+              82,
+              259
+            ],
+            [
+              13,
+              52
+            ]
+          ],
+          "packed_word": 1409292542004,
+          "coefficient_choices": [
+            [
+              3,
+              13
+            ]
+          ],
+          "a": 3,
+          "b": 13,
+          "test_input": 107,
+          "answer": {
+            "y": 334
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 12:\nEnter JSON: "
+        },
+        {
+          "round": 12,
+          "question": "the value of x[98] you submitted is: 90.55539944267366\nAs a final Test please give the value after applying the secret operation of the random number 149: \n{\"y\" : number }",
+          "selected_text": "90.55539944267366",
+          "samples": [
+            [
+              181,
+              907
+            ],
+            [
+              170,
+              852
+            ]
+          ],
+          "packed_word": 3111459832660,
+          "coefficient_choices": [
+            [
+              5,
+              2
+            ]
+          ],
+          "a": 5,
+          "b": 2,
+          "test_input": 149,
+          "answer": {
+            "y": 747
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 13:\nEnter JSON: "
+        },
+        {
+          "round": 13,
+          "question": "the value of x[98] you submitted is: 17.51715302679804\nAs a final Test please give the value after applying the secret operation of the random number 17: \n{\"y\" : number }",
+          "selected_text": "17.51715302679804",
+          "samples": [
+            [
+              35,
+              281
+            ],
+            [
+              9,
+              73
+            ]
+          ],
+          "packed_word": 601884794953,
+          "coefficient_choices": [
+            [
+              8,
+              1
+            ]
+          ],
+          "a": 8,
+          "b": 1,
+          "test_input": 17,
+          "answer": {
+            "y": 137
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 14:\nEnter JSON: "
+        },
+        {
+          "round": 14,
+          "question": "the value of x[98] you submitted is: 3.5013890381669626\nAs a final Test please give the value after applying the secret operation of the random number 5: \n{\"y\" : number }",
+          "selected_text": "3.5013890381669626",
+          "samples": [
+            [
+              7,
+              22
+            ],
+            [
+              194,
+              396
+            ]
+          ],
+          "packed_word": 120306811276,
+          "coefficient_choices": [
+            [
+              2,
+              8
+            ]
+          ],
+          "a": 2,
+          "b": 8,
+          "test_input": 5,
+          "answer": {
+            "y": 18
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 15:\nEnter JSON: "
+        },
+        {
+          "round": 15,
+          "question": "the value of x[98] you submitted is: 78.6064167462755\nAs a final Test please give the value after applying the secret operation of the random number 192: \n{\"y\" : number }",
+          "selected_text": "78.6064167462755",
+          "samples": [
+            [
+              157,
+              1743
+            ],
+            [
+              136,
+              1512
+            ]
+          ],
+          "packed_word": 2700895913448,
+          "coefficient_choices": [
+            [
+              11,
+              16
+            ]
+          ],
+          "a": 11,
+          "b": 16,
+          "test_input": 192,
+          "answer": {
+            "y": 2128
+          },
+          "marker_replaced": true,
+          "verdict_state": "ready",
+          "verdict": "Round 16:\nEnter JSON: "
+        },
+        {
+          "round": 16,
+          "question": "the value of x[98] you submitted is: 37.063530776125845\nAs a final Test please give the value after applying the secret operation of the random number 239: \n{\"y\" : number }",
+          "selected_text": "37.063530776125845",
+          "samples": [
+            [
+              74,
+              1040
+            ],
+            [
+              227,
+              3182
+            ]
+          ],
+          "packed_word": 1273493220462,
+          "coefficient_choices": [
+            [
+              14,
+              4
+            ]
+          ],
+          "a": 14,
+          "b": 4,
+          "test_input": 239,
+          "answer": {
+            "y": 3350
+          },
+          "marker_replaced": true,
+          "verdict_state": "flag",
+          "verdict": "{\"flag\": \"Securinets{ed9a482110a5a6936482e700155f811742f97a04decfa75d3cee28bca77239c1}\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_flag": {
+        "eof": true,
+        "trailing_hex": ""
+      }
+    },
+    {
+      "name": "float-zero",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 0.0\nAs a final Test please give the value after applying the secret operation of the random number 181: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    },
+    {
+      "name": "float-255",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 255.0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 255.0\nAs a final Test please give the value after applying the secret operation of the random number 86: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    },
+    {
+      "name": "float-254-point-5",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 254.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 254.5\nAs a final Test please give the value after applying the secret operation of the random number 107: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    },
+    {
+      "name": "small-scientific-fraction",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": 1,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 98,
+          "const": 0.5,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 2.9802322387695312e-08\nAs a final Test please give the value after applying the secret operation of the random number 117: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    },
+    {
+      "name": "priority-array-index-constant",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "z",
+          "index": -1,
+          "const": 256,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Array must be x or y\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "priority-index-constant",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": -1,
+          "const": 256,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Invalid index\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "priority-constant-destination",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 256,
+          "destination": "z",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Array must be x or y\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "newline-completion",
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 0\nAs a final Test please give the value after applying the secret operation of the random number 162: \n{\"y\" : number }"
+        }
+      ],
+      "initial": "Round 1:\nEnter JSON: ",
+      "waits_for_complete_line": true
+    },
+    {
+      "name": "fragment-completion",
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 0\nAs a final Test please give the value after applying the secret operation of the random number 23: \n{\"y\" : number }"
+        }
+      ],
+      "initial": "Round 1:\nEnter JSON: ",
+      "waits_for_complete_line": true
+    },
+    {
+      "name": "two-distinct-lines",
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 14\nAs a final Test please give the value after applying the secret operation of the random number 181: \n{\"y\" : number }"
+        }
+      ],
+      "initial": "Round 1:\nEnter JSON: "
+    },
+    {
+      "name": "correct-answer-as-string",
+      "question": "the value of x[98] you submitted is: 111.15001542438404\nAs a final Test please give the value after applying the secret operation of the random number 117: \n{\"y\" : number }",
+      "samples": [
+        [
+          222,
+          2457
+        ],
+        [
+          218,
+          2413
+        ]
+      ],
+      "coefficient_choices": [
+        [
+          11,
+          15
+        ]
+      ],
+      "answer": {
+        "y": "1302"
+      },
+      "verdict_state": "error",
+      "verdict": "{\"error\": \"{\\\"error\\\": \\\"Incorrect value submitted. Expected 1302, but got 1302\\\"}\"}\n",
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      }
+    },
+    {
+      "name": "negative-constant-boundary",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 98,
+          "const": -255,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "error",
+          "text": "{\"error\": \"{\\\"error\\\": \\\"Value at x[98] is negative, which cannot shown for performance reasons:\\\"}\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "two-objects-same-line",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "error",
+          "text": "{\"error\": \"Extra data: line 1 column 94 (char 93)\"}\n"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "after_error": {
+        "eof": true,
+        "trailing_hex": ""
+      },
+      "last_state": "error"
+    },
+    {
+      "name": "binary-cross-array-multiplication",
+      "requests": [
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "x",
+          "dest_index": 96
+        },
+        {
+          "operation": "add_const",
+          "source": "x",
+          "index": 96,
+          "const": 7,
+          "destination": "x",
+          "dest_index": 96
+        },
+        {
+          "operation": "mult_const",
+          "source": "x",
+          "index": 0,
+          "const": 0,
+          "destination": "y",
+          "dest_index": 97
+        },
+        {
+          "operation": "add_const",
+          "source": "y",
+          "index": 97,
+          "const": 9,
+          "destination": "y",
+          "dest_index": 97
+        },
+        {
+          "operation": "mult",
+          "source": [
+            "x",
+            "y"
+          ],
+          "source_index1": 96,
+          "source_index2": 97,
+          "destination": "x",
+          "dest_index": 98
+        },
+        {
+          "operation": "submit",
+          "source": "x",
+          "index": 98
+        }
+      ],
+      "responses": [
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "ready",
+          "text": "{\"result\": \"Operation successful\"}\nEnter JSON: "
+        },
+        {
+          "state": "question",
+          "text": "the value of x[98] you submitted is: 63\nAs a final Test please give the value after applying the secret operation of the random number 144: \n{\"y\" : number }"
+        }
+      ],
+      "initial": {
+        "state": "ready",
+        "text": "Round 1:\nEnter JSON: "
+      },
+      "last_state": "question"
+    }
+  ]
+}

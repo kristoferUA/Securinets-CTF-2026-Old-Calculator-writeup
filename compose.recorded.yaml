@@ -1,0 +1,4 @@
+services:
+  calculator:
+    environment:
+      CALCULATOR_MODE: recorded
