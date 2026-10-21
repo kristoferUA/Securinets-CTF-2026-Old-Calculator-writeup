@@ -389,5 +389,3 @@ The GitHub source ZIP contains the repository files. The complete ZIP also conta
 The method depends on the arithmetic and serialization behavior of this Old Calculator version: exact binary scaling, acceptance of `0.5`, and enough printed precision to reconstruct the float. The initial hidden pairs must also fit the documented packing widths.
 
 The [live protocol reference](reference/PROTOCOL.md) separates measured behavior from unresolved details. The local service reproduces the recorded dialogue and arithmetic; the original random generator and distributions remain unknown. Its explicit implementation choices are described in [the instance guide](docs/instance.md).
-
-The repository layout follows the author's [Kuliah67 Archive writeup](https://github.com/kristoferUA/COMPFEST-CTF-2026-writeups/tree/main/COMPFEST18-kuliah67-archive-writeup).
